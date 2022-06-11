@@ -1,0 +1,224 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.feature_container {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px 0;
+} 
+.feature_container h2{
+    color:white;
+   
+    padding: 2% 10% 5% 10%;
+
+    
+}
+
+.feature_container p{
+    word-wrap: break-word;
+    color:white;
+
+    padding: 2% 10% 2% 10%;
+    
+
+}
+
+.purple_div{
+    
+    height: 100%;
+    width: 100%;
+   
+    
+    background-color: rgba(7, 1, 98, 0.492);
+   
+    position: absolute;
+    text-align: left;
+    
+
+}
+
+
+.bed{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/accomodation.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+
+.beach{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/beach2.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+
+.pool{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/pool.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.gym{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/gym.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.children{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/children.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.Spa{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/jacuzzi.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.camp{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/fire.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+
+.meal4{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/meal4.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+
+.walk{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/walk.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+.stars{
+    height: 350px;
+    width: 90%;
+    background-image: url("../public/stars.jpg");
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+
+
+@media (min-width:800px){
+    .bed {
+        width: 60%;
+    }
+    .beach {
+        width: 60%;
+    }
+    .pool {
+        width: 60%;
+    }
+    .Spa {
+        width: 60%;
+    }
+    .stars {
+        width: 60%;
+    }
+    .walk {
+        width: 60%;
+    }
+    .gym {
+        width: 60%;
+    }
+    .children {
+        width: 60%;
+    }
+    .meal4 {
+        width: 60%;
+    }
+    .camp {
+        width: 60%;
+    }
+
+}
+

@@ -1,38 +1,440 @@
+html,body {
+  margin:0;
+  padding: 0;
+  top:0;
+}
+/* *, *::after, *::before {
+  box-sizing:border-box ;
+
+} */
+
+body {
+  align-items:center ;
+  justify-content: center;
+  text-rendering: optimizeLegibility;
+  background-image:url("../public/background2.jpg"); 
+  background-size: cover;
+  height: 180vh;
+
+  background-repeat: no-repeat;
+  
+}
+:root {
+  --animate-duration: 2s;
+  --animate-delay: 0.9s;
+}
+
+.request-form-appear.request-form-appear-active {
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1; 
+  animation-name: slideInFromRight;
+}
+
+
+
+.Container {
+  text-align: center;
+  height: 100vh;
+  width:100vw;
+  background-repeat: no-repeat;
+  background-color: transparent;
+ 
+  
+  
+}
 .App {
   text-align: center;
+  background-color: rgb(2, 1, 18);
+  height: fit-content;
+  
+}
+.App div{
+  animation-duration: 1s; 
+  animation-timing-function: linear; 
+  animation-delay: 0s; 
+  animation-iteration-count: 1; 
+  animation-name: slideInFromBottom; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head {
+  height: 450px;
+  height:100vh;
+  transition-timing-function: ease-out 500ms ;
+ 
+ 
+  background-color: rgba(255, 77, 0, 0.018);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.head_content {
+  color: orangered;
+  font-style: bold;
+  font-family: emoji;
+  word-wrap:break-word;
+  margin: 15% 16% 0 2%;
+  height: 90%;
+  font-size: large;
+  font-weight: 900;
+  
+  
+
+}
+.head_content h1{
+  padding: 25% 5% 5% 3%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.head_content p {
+  text-align: left;
+  padding: 7%  2% 2% 3%;
+  
+}
+
+.abt {
+  background-color: rgba(32, 186, 246, 0.822);
+  height: fit-content;
+  font-style: bold;
+  font-family: emoji;
+  word-wrap:break-word;
+  font-size: large;
+  font-weight: 900;
+}
+.abt h2{
+  padding: 2%;
+  color: rgb(32, 32, 32);
+}
+
+.services {
+  
+  width: 80%;
+  background-color: rgb(226, 249, 249);
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px  rgba(0, 0, 0, 0.576);
+  
+}
+.services h3{
+  padding:10px;
+}
+
+.services p{
+  text-align: left;
+  padding: 0 0 5px 20px;
+  color: rgba(8, 13, 17, 0.658);
+}
+.services p:nth-child(9){
+  padding-bottom: 5%;
+}
+
+.extra{
+  height: 30px;
+}
+.extra_div {
+  height: 80px;
+}
+.extra_title{
+  color: white;
+  margin: 5%;
+}
+
+.creative {
+  min-height: 300px; 
+  height: 450px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("../public/background4.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+  animation-duration: 1s; 
+  animation-timing-function: linear; 
+  animation-delay: 0s; 
+  animation-iteration-count: 1; 
+  animation-name: slideInFromBottom; 
+  
+ 
+
+}
+
+.creative h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.creative p{
+  color: white;
+  text-align: left;
+  padding: 2% 50% 2% 10%;
+}
+
+
+.fire {
+  min-height: 300px; 
+  height: 455px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("./public/fire1.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+  animation-duration: 1s; 
+  animation-timing-function: linear; 
+  animation-delay: 0s; 
+  animation-iteration-count: 1; 
+  animation-name: slideInFromBottom; 
+
+}
+
+.fire h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.fire p{
+  color: white;
+  text-align: left;
+  padding: 2% 50% 2% 10%;
+}
+
+
+
+.spa {
+  min-height: 300px; 
+  height: 450px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("./public/spa.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+}
+
+.spa h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.spa p{
+  color: orangered;
+  font-weight: 600;
+  text-align: left;
+  padding: 2% 50% 2% 10%;
+}
+
+
+.team {
+  min-height: 300px; 
+  height: 450px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("./public/team.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+}
+
+.team h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.team p{
+  color: white;
+  text-align: left;
+  padding: 2% 50% 2% 10%;
+}
+
+
+.meal {
+  min-height: 300px; 
+  height: 450px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("./public/meal.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+}
+
+.meal h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.meal p{
+  color: white;
+  text-align: left;
+  font-weight: 900;
+  padding: 2% 50% 2% 10%;
+}
+
+
+
+
+.park {
+  min-height: 300px; 
+  height: 450px;
+  width: 90%;
+  background-color: transparent;
+  margin: auto;
+  background-image: url("./public/park.jpg");
+  background-size: cover;
+  border-radius: 7px;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+}
+
+.park h2{
+  text-align: left;
+  color: white;
+  padding: 2% 40% 2% 10%;
+}
+
+.park p{
+  color: white;
+  text-align: left;
+  padding: 2% 50% 2% 10%;
+}
+
+.about {
+  width: 75%;
+  height: fit-content;
+  background-color: rgba(1, 26, 36, 0.188);
+  /* background-image: url("./public/background5.jpg");
+  background-size: cover; */
+  margin:auto;
+  border-radius: 20px;
+  border-width: 10px;
+  border-style: groove;
+  border-color: orangered;
+}
+
+.about h2{
+  text-align: center;
+  color: white;
+  padding: 2% 10% 2% 10%;
+}
+
+.about p{
+  color: white;
+  text-align: left;
+  padding: 2% 10% 2% 10%;
+  word-wrap: break-word;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.about i{
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: 600;
+  font-size: large;
+  padding: 2% 10% 2% 10%; 
+  color: orange;
+  font-family: Brush Script MT;
+  
+}
+
+.about b{
+  text-align: center;
+  word-wrap: break-word;
+  font-weight: 600;
+  font-size: large;
+  font-style: Bold;
+  padding: 2% 10% 2% 10%;
+  color:orangered;
+  font-family: Arial Black; 
+
+
+}
+
+.foot {
+  height: fit-content;
+  width: 90%;
+  margin:auto;
+  background-color: transparent;
+
+}
+/* @media (min-width:900px){
+  .foot {
+    height: ;
+  } 
+} */
+.foot h5{
+  color:white;
+  text-align: left;
+  cursor: pointer;
+  padding: 0 2%  2%;
+  font-weight: 700;
+
+}
+.foot h4{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.blog_icon {
+  color:red;
+  background-color: rgb(255, 38, 0);
+  font-size: x-large;
+  vertical-align: baseline;
+  border-radius: 50%;
+  padding: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.foot h6{
+  color: rgba(255, 255, 255, 0.461);
+  text-align: left;
+  font-size: small;
+  padding: 0 2%  2%;
+  cursor: pointer;
+}
+
+.foot i{
+  color: rgba(161, 159, 159, 0.843);
+  font-size: small;
+}
+.foot a{
+  color: white;
+  text-decoration: none;
+}
+
+.social_links {
+   height: 100px;
+   background-color: transparent;
+   display: flex;
+   margin: 2% 0 5% 0;
+
+
+}
+.social_links div{
+  width: 20%;
+  height: 60%;
+  background-color: rgb(255, 38, 0);
+  margin: 5% 2% 5% 2% ;
+}
+
+.social_icons {
+  color:rgb(1, 1, 33);
+  padding: 10% 10% 10% 10%;
+  font-size: xx-large;
+  
 }

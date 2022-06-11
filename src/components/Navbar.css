@@ -1,0 +1,256 @@
+.container {
+   
+    background-color: transparent;
+    height: 70px;
+    top:0;
+    left:0;
+    width:100%;
+    position: fixed;
+    z-index: 10;
+    
+}
+.container div{
+  animation-duration: 1s; 
+  animation-timing-function: linear; 
+  animation-delay: 0s; 
+  animation-iteration-count: 1; 
+  animation-name: slideInFromBottom; 
+}
+.fiti_logo {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+    height: 4rem;
+    background:  rgb(2, 1, 18);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index:10;
+
+}
+
+.fiti_logo h1{
+    font-style: bold;
+    font-weight: 900;
+    font-size: xx-larger;
+    color: rgb(255, 8, 0);
+    font-family: 'Times New Roman', Times, serif ;
+}
+
+
+.burger {
+    position: absolute;
+    top: 20%;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index:10;
+
+   
+
+   
+}
+   .burger div {
+    width: 2rem;
+    margin: 5%;
+    height: 0.25rem;
+    background-color: grey;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+
+.burger2 {
+    position: absolute;
+    top: 20%;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index:10;
+
+
+   
+
+   
+}
+   .burger2 div {
+    width: 2rem;
+    margin: 5%;
+    height: 0.25rem;
+    background-color: grey;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+.burger2:focus {
+    outline: none;
+}
+   .burger2 div:first-child {
+       transform: rotate(45deg);
+   }
+
+   .burger2 div:nth-child(2){
+       opacity: 0;
+       transform: translateX(20px);
+   }
+
+   .burger2 div:nth-child(3){
+       transform: rotate(-45deg);
+   }
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: orange;
+    height: 100vh;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    transition: transform 0.3s ease-in-out;
+    transform:translateX(-100%);
+    
+     
+}
+
+.menu a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    letter-spacing: 0.5rem;
+    color: rgb(17, 1, 17);
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+
+}
+.menu:hover {
+    color: red;
+}
+
+
+.menu2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image:  linear-gradient(to bottom left,rgb(255, 115, 0),orange, yellow);
+    height: 100vh;
+    width:100vw;
+    text-align: left;
+    padding: 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    transform:translateX(0);
+    transition: transform 500ms ease-in-out;
+    
+    
+     
+}
+
+
+.menu2:hover {
+    color: red;
+}
+
+
+.a_div {
+    
+  
+    height: 80%;
+    width: 80%;
+    margin:5% 2% 2% 2%;
+    border-radius: 30px;
+    background-color: rgba(50, 101, 232, 0.311);
+}
+.a_div a{
+    font-size: Large;
+    /* text-transform: uppercase; */
+    font-family: fantasy;
+    /* padding: 10% 10% 20% 7%; */
+    letter-spacing: 0.1rem; 
+    color: rgba(60, 59, 59, 0.841);
+    text-decoration: none;
+    transition: color 0.3s linear;
+    font-family: Arial black;
+    
+
+
+}
+.a_div p{
+    padding: 2% 3% 3% 7%;
+}
+
+.extraa {
+    height: 30px;
+}
+
+@media (min-width:1000px){
+    .extraa {
+        height:70px
+    }
+    .a_div p{
+        padding: 1% 3% 2% 7%;
+    }
+   
+}
+
+
+
+
+
+.alert-enter {
+    opacity:0;
+    transform: scale(0.9)
+
+}
+.alert-enter-active {
+    opacity:1;
+    transform:translateX(0);
+    transition:opacity 9s, transform 500ms ease-in-out;
+
+}
+
+.alert-exit {
+    opacity:1;
+}
+
+.alert-exit-active {
+    opacity:0;
+    transform:translateX(-100%);
+    transition: opacity cubic-bezier(0.175, 0.885, 0.32, 1.275) transform 500ms ease-in-out;
+}
+
+.request-form-appear.request-form-appear-active {
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1; 
+    animation-name: slideInFromLeft;
+  }
+

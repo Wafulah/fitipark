@@ -1,0 +1,58 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.feedback_container {
+    width: 100%;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px 0;
+} 
+.feedback_container h3{
+    color:white;
+    padding-bottom: 2%;
+    font-family: Arial black; 
+    
+}
+
+.feedback_container p{
+    word-wrap: break-word;
+    color:rgba(200, 196, 196, 0.821);
+    font-style: italic;
+    padding: 2% 20% 2% 20%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+
+}
+
+
+
+
+
+.comments{
+    height: 350px;
+    width: 90%;
+    background-size: cover;
+    border-radius: 5px;
+    margin:auto;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 2%;
+    margin-right: 2%;
+
+    
+}
+.comments b{
+    word-wrap: break-word;
+    color: orangered;
+    font-style: bold;
+    padding: 0;
+    text-align: left;
+    font-weight: 900;
+    font-size: xx-large;
+    
+
+}
+
