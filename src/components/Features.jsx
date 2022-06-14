@@ -1,17 +1,40 @@
 import { useScroll } from '@use-gesture/react';
 import { animated,useSpring } from 'react-spring';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './Features.css';
 
 
 
 function Features () {
+  const settings = {
+
+    arrows:false,
+    dots:true,
+    infinite:false,
+    speed:500,
+    slidesToShow: 1,
+    slidesToScroll:1,
+    className:"carel"
+    
+    
+    
+  };
    
     
     return (
-        <div className="feature_container">
+      
+      <div>
+      <div  className='feature_container' >
+      
+           <Slider {...settings}  >
+      
         
-        <div className='bed'>
-        <div className='purple_div'>
+        
+        
+        <div className='bed'  >
+        <div className='purple_div' style={{ width:"100%"}}>
         
           <h2>World Class  Accomodation</h2>
           <p>
@@ -23,9 +46,12 @@ function Features () {
         
 
         </div>
+       
+      
+
         
-        <div className='beach'>
-        <div className='purple_div'>
+        <div className='beach'  >
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Private Beach</h2>
@@ -39,8 +65,8 @@ function Features () {
         </div>
     
       
-        <div className='pool'>
-        <div className='purple_div'>
+        <div className='pool' >
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>5 Star Swimming Pools</h2>
@@ -54,7 +80,7 @@ function Features () {
         </div>
 
         <div className='gym'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>World Class Gym</h2>
@@ -69,7 +95,7 @@ function Features () {
         </div>
 
         <div className='children'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Children's Playing Park</h2>
@@ -84,7 +110,7 @@ function Features () {
         </div>
 
         <div className='Spa'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Spa & Massage </h2>
@@ -100,7 +126,7 @@ function Features () {
         </div>
 
         <div className='camp'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Safe Camping Space </h2>
@@ -116,7 +142,7 @@ function Features () {
 
 
         <div className='meal4'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Amazing Meals </h2>
@@ -133,7 +159,7 @@ function Features () {
         </div>
 
         <div className='walk'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Natural Refreshing Park</h2>
@@ -150,7 +176,7 @@ function Features () {
         </div>
         
         <div className='stars'>
-        <div className='purple_div'>
+        <div className='purple_div' style={{ width:"100%"}}>
 
         
           <h2>Beutiful Night Sky</h2>
@@ -164,9 +190,14 @@ function Features () {
     
         </div>
         </div>
+         
 
-
+</Slider>       
         </div>
+        </div>
+
+
+       
     )
 }
 

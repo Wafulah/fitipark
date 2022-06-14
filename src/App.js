@@ -4,6 +4,7 @@ import 'animate.css';
 import handleViewport from 'react-in-viewport';
 import { GrLocation,GrPhone,GrMailOption,GrFacebook,GrInstagram,GrSnapchat,GrLinkedin } from 'react-icons/gr';
 import  { CSSTransition } from 'react-transition-group';
+import { motion }  from "framer-motion";
 import { IconContext } from 'react-icons';
 import Navbar from './components/Navbar';
 import Features from './components/Features';
@@ -52,7 +53,27 @@ const  App = () => {
   const onScreenMeal = useOnScreen(mealhook, "-150px");
 
   const abouthook = useRef();
-  const onScreenabout = useOnScreen(abouthook, "-200px");
+  const onScreenabout = useOnScreen(abouthook, "-100px"); 
+
+  
+  const homehook = useRef();
+  const onScreenHome = useOnScreen(homehook, "-150px");
+
+  
+  const mailhook = useRef();
+  const onScreenMail = useOnScreen(mailhook, "-100px");
+
+  
+  const locationhook = useRef();
+  const onScreenLocation = useOnScreen(locationhook, "-100px");
+
+  
+  const phonehook = useRef();
+  const onScreenPhone = useOnScreen(phonehook, "-180px");
+
+  
+  const socialhook = useRef();
+  const onScreenSocial = useOnScreen(socialhook, "-100px");
 
  
    
@@ -64,15 +85,16 @@ const  App = () => {
     
      <Navbar  />
      <div className="head">
-     <div className="head_content">
-        <h1 className="animate__animated animate__lightSpeedInRight">We give you space to be yourself</h1>
+     <div className="head_content" ref={homehook}>
+     {onScreenHome ? <> <h1 className="animate__animated animate__lightSpeedInRight">We give you space to be yourself</h1></> : <h1>FitiPark</h1> }
        
-       <h3 className="animate__animated animate__rotateIn">
-       <p className="animate__animated animate__rotateIn">
-       <b className="animate__animated animate__rotateIn">
+       <h3 className="animate__animated animate__slideInUp">
+       <p className="animate__animated animate__slideInUp">
+      
+       {onScreenHome ? <> <b className="animate__animated animate__slideInUp">
        Whether you want to relax or have an amazing time,Fiti Park got you covered.From our serene 
        View to our refreshing meals,we have something for everyone.
-        </b>
+        </b></> : <p className="animate__animated animate__rotateIn">Ultimate Vacation Destination.</p> }
         
        </p>
        </h3>
@@ -135,7 +157,7 @@ const  App = () => {
     Refreshing enviroment gives you ability to concetrate 
     on your work enabling flow of fresh ideas.
 
-    </p></> : "Creative" }
+    </p></> : <p>FitiPark</p> }
 
     </div>
     <div className="extra_div"></div>
@@ -157,7 +179,7 @@ const  App = () => {
     Enjoy Camp Expirience with lots of laugh and love.
     
 
-    </p></> : "Fire" }
+    </p></> : <p>FitiPark</p> }
 
     </div>
     <div className="extra_div"></div>
@@ -179,7 +201,7 @@ const  App = () => {
      and taking a break from the World.
 
 
-    </p></> : "Spa" }
+    </p></> : <p>FitiPark</p> }
 
     </div>
     <div className="extra_div"></div>
@@ -201,7 +223,7 @@ const  App = () => {
 
 
 
-    </p></> : "Team" }
+    </p></> : <p>FitiPark</p> }
 
     </div>
     <div className="extra_div"></div>
@@ -222,7 +244,7 @@ const  App = () => {
     Mouth watering meals.We give you the ultimate dining 
     Expirience.
 
-    </p></> : "Meal" }
+    </p></> : <p>FitiPark</p> }
     </div>
     <div className="extra_div"></div>
 
@@ -245,7 +267,7 @@ const  App = () => {
 
 
     </p>
-    </> : "Park" }
+    </> : <p>FitiPark</p> }
     </div>
     </>
     {/* </CSSTransition> */}
@@ -295,7 +317,7 @@ const  App = () => {
 
 
 
-    </p></> : <h2>About us</h2> }
+    </p></> : <h2>Fiti Park</h2> }
 
 
 
@@ -308,35 +330,41 @@ const  App = () => {
 
     <div className="extra_div"></div>
 
-    <div className="foot">
+    <div className="foot" >
     <IconContext.Provider value={{ className:"blog_icon"}}>
+    <div ref={locationhook}>
    <GrLocation className='blog_icon' />
     
-    <h4 className="animate__animated animate__backInDown">Lamu Beach</h4>
+   {onScreenLocation ? <><h4 className="animate__animated animate__backInDown">Lamu Beach</h4></> : '' }
+    </div>
+   <div ref={phonehook}>
     <GrPhone />
-    <h4 className="animate__animated animate__fadeInLeft">0710760872</h4>
+    {onScreenPhone ? <> <h4 className="animate__animated animate__fadeInLeft">0710760872</h4> </> : '' }
+   </div>
+    <div ref={mailhook}>
     <GrMailOption />
-    <h4 className="animate__animated animate__fadeInRight"><a href= "mailto:fitipark.gmail.com">fitipark.gmail.com</a></h4>
+    {onScreenMail ?  <><h4 className="animate__animated animate__fadeInRight"><a href= "mailto:fitipark.gmail.com">fitipark.gmail.com</a></h4></>:'' }
+   </div>
     </IconContext.Provider>
     <div className="social_links">
     <IconContext.Provider value={{ className:"social_icons"}}>
    
-    <div>
+    <div ref={socialhook}>
 
-<GrFacebook />
+    {onScreenMail ? <GrFacebook className="animate__animated animate__slideInDown" /> : ''}
     </div>
 
-    <div>
-    <GrLinkedin />
+    <div ref={socialhook}>
+    {onScreenMail ?  <GrLinkedin className="animate__animated animate__slideInDown" /> : ''}
 
     </div>
 
-    <div>
-    <GrInstagram />
+    <div ref={socialhook}>
+    {onScreenMail ?  <GrInstagram className="animate__animated animate__slideInDown"/> : ''}
 
     </div>
-    <div>
-   <GrSnapchat />
+    <div ref={socialhook}>
+      {onScreenMail ?  <GrSnapchat  className="animate__animated animate__slideInDown"/> : ''}
     </div>
 
     </IconContext.Provider>
